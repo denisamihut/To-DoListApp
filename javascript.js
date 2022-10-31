@@ -12,17 +12,17 @@ $(document).ready(function () {
         var type2 = "School Task";
         var type3 = "Household Task";
 
-        $('#todo_list').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + " " + task_type + ' </span> <button type="button" class="btn btn-primary" id="edit' + counter + '"> <i class="fas fa-pencil"></i> Edit</button>' + " " + '<button type="button" class="done btn btn-danger" id="delete' + counter + '"> <i class="fas fa-trash"></i> Delete</button>' + '</li>');
+        $('#todo_list').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + " " + task_type + ' </span> <button type="button" class="btn btn-primary" id="edit' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="delete' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         if (task_type == type1) {
-            $('#todo_work').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="editw' + counter + '"> <i class="fas fa-pencil"></i> Edit</button>' + " " + '<button type="button" class="done btn btn-danger" id="deletew' + counter + '"> <i class="fas fa-trash"></i> Delete</button>' + '</li>');
+            $('#todo_work').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="editw' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deletew' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         }
         if (task_type == type2) {
-            $('#todo_home').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="edith' + counter + '"> <i class="fas fa-pencil"></i> Edit</button>' + " " + '<button type="button" class="done btn btn-danger" id="deleteh' + counter + '"> <i class="fas fa-trash"></i> Delete</button>' + '</li>');
+            $('#todo_home').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="edith' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deleteh' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         }
         if (task_type == type3) {
-            $('#todo_school').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="edits' + counter + '"> <i class="fas fa-pencil"></i> Edit</button>' + " " + '<button type="button" class="done btn btn-danger" id="deletes' + counter + '"> <i class="fas fa-trash"></i> Delete</button>' + '</li>');
+            $('#todo_school').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="edits' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deletes' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         }
-
+        //CRUD for regular list 
         $('#edit' + counter).click(function () {
             $(this).prev().attr('contenteditable', 'true');
             $(this).prev().focus();
@@ -30,7 +30,7 @@ $(document).ready(function () {
         $('#delete' + counter).click(function () {
             $(this).parent().remove();
         });
-
+        //CRUD for work list item
         $('#editw' + counter).click(function () {
             $(this).prev().attr('contenteditable', 'true');
             $(this).prev().focus();
@@ -38,7 +38,7 @@ $(document).ready(function () {
         $('#deletew' + counter).click(function () {
             $(this).parent().remove();
         });
-
+        //CRUD for household list item
         $('#edith' + counter).click(function () {
             $(this).prev().attr('contenteditable', 'true');
             $(this).prev().focus();
@@ -46,8 +46,7 @@ $(document).ready(function () {
         $('#deleteh' + counter).click(function () {
             $(this).parent().remove();
         });
-
-
+        //CRUD for school list item
         $('#edits' + counter).click(function () {
             $(this).prev().attr('contenteditable', 'true');
             $(this).prev().focus();
@@ -60,6 +59,4 @@ $(document).ready(function () {
     $(function () {
         $('#add').on('click', enter_task);
     });
-
-
 });
