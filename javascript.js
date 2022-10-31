@@ -3,24 +3,24 @@ $(document).ready(function () {
     // $('#add').click(function () {
     //     $('#inp').show();
     // });
-    $(function() {
+    $(function () {
         $('#add').on('click', enter_task);
     });
-    
+
     var counter = 1;
-    function enter_task () {
-            var text = $('#enter_task').val();
-            $('#todo_list').append('<li><span>'+ text + ' </span><input type="submit" id="edit' + counter + '" value="Edit">' + '<input type="submit" class="done" id="delete' + counter + '" value="Delete">' +'</li>');
-      
-    $('#edit' + counter).click(function(){
-        $(this).prev().attr('contenteditable','true');
-        $(this).prev().focus();
-    });
-    
-    $('#delete' + counter).click(function(){
-        $(this).parent().remove();
-    });
-    
-      counter++;
+    function enter_task() {
+        var text = $('#enter_task').val();
+        $('#todo_list').append('<li><span>' + text + ' </span> <button type="button" class="btn btn-primary" id="edit' + counter + '"> Edit</button>' + " " + '<button type="button" class="done btn btn-danger" id="delete' + counter + '"> Delete</button>' + '</li>');
+
+        $('#edit' + counter).click(function () {
+            $(this).prev().attr('contenteditable', 'true');
+            $(this).prev().focus();
+        });
+
+        $('#delete' + counter).click(function () {
+            $(this).parent().remove();
+        });
+
+        counter++;
     };
 });
