@@ -17,57 +17,78 @@
 </head>
 
 <body class="bg-light">
-    <div class="container bg-dark bg-gradient rounded text-center w-25 p-2 mb-2 mt-5 ">
-
+    <div class="container bg-dark bg-gradient rounded text-center w-75 p-2 mb-2 mt-5 ">
         <div class="heading text-dark mb-1 bg-white p-3 rounded ">
             <h2 class="border-bottom border-dark py-2">Hello & Welcome to Your To-Do List</h2>
-            <h5>An hour in the morning is worth two in the evening</h5>
-            <p class="text-danger"><span id='date-time'></span>.</p>
+            <p class="text-info"><span id='date-time'></span>.</p>
         </div>
 
         <form class="bg-white p-3 mb-1 rounded">
-            <h3 class="pb-2">What do you want to do today?</h3>
+            <h3 class="border-bottom border-dark pb-3">What do you want to do today?</h3>
 
             <label for="task_title">Task title: </label>
-            <input type="text" id="enter_task" name="task_title"><br>
+            <input type="text" id="enter_task" name="task_title">
 
             <label for="task_duraion">Task duration: </label>
             <select id="enter_duration" name="task_duraion">
-                <option value="1min">1 minute</option>
-                <option value="5min">5 minutes</option>
-                <option value="10min">10 minutes</option>
-                <option value="15min">15 minutes</option>
-                <option value="30min">30 minutes</option>
-                <option value="1hr">1 hour</option>
-                <option value="2hr">2 hours</option>
-                <option value="3hr">3 hours</option>
-                <option value="5hr">5 hours</option>
+                <option value="1 minute">1 minute</option>
+                <option value="5 minutes">5 minutes</option>
+                <option value="10 minutes">10 minutes</option>
+                <option value="15 minutes">15 minutes</option>
+                <option value="30 minutes">30 minutes</option>
+                <option value="1 hour">1 hour</option>
+                <option value="2 hours">2 hours</option>
+                <option value="3 hours">3 hours</option>
+                <option value="5 hours">5 hours</option>
             </select><br>
 
             <label for="start">Due date:</label>
-            <input type="date" id="enter_due_date" name="task_due_date" min="2022-10-31" max="2022-11-13"><br>
+            <input type="date" id="enter_due_date" name="task_due_date" min="2022-10-31" max="2022-11-13">
 
-            <label for="household_task">Task Category:</label><br>
-            <input type="radio" id="household_task" name="household_task">
-            <label for="household_task">Household Task</label><br>
+            <label for="task_type">Task Type: </label>
+            <select id="enter_task_type" name="task_type">
+                <option value="Work Task">Work Task</option>
+                <option value="School Task">School Task</option>
+                <option value="Household Task">Household Task</option>
+            </select><br>
 
-            <input type="radio" id="work_task" name="work_task">
-            <label for="work_task">Work Task</label><br>
-
-            <input type="radio" id="school_task" name="school_task">
-            <label for="school_task">School Task</label><br>
-
-            <button type="button" id="add" class="btn btn-success"> <i class="fas fa-list-check"></i> Add
+            <button type="button" id="add" class="btn btn-success mt-1"> <i class="fas fa-list-check"></i> Add
                 Task</button><br>
         </form>
         <!-- <input type="text" placeholder="Add New task" id="enter_task"> -->
         <!-- <button type="button" id="add" class="btn btn-success"> <i class="fas fa-list-check"></i> Add Task</button> -->
-        <div class="task_list bg-white p-3 rounded">
-            <h3 class=" pb-2">My To-Do List Items</h3>
+        <div class="task_list bg-white mb-1 p-3 rounded">
+            <h3 class="border-bottom border-dark pb-2">My To-Do List Items</h3>
             <ul id="todo_list" style="list-style: none;" class="text-black mt-2">
             </ul>
         </div>
 
+        <div class="categories rounded p-3 bg-white">
+            <h3 class="border-bottom border-dark pb-2">To-Do Items on categories</h3>
+            <div class="row m-1">
+                <div class="col-4">
+                    <div class="task_work p-3 rounded">
+                        <h5 class="pb-2">Work List Items</h5>
+                        <ul id="todo_work" style="list-style: none;" class="text-black mt-2">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="task_home p-3 rounded">
+                        <h5 class="pb-2">Home List Items</h5>
+                        <ul id="todo_home" style="list-style: none;" class="text-black mt-2">
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="task_school p-3 rounded">
+                        <h5 class="pb-2">School List Items</h5>
+                        <ul id="todo_school" style="list-style: none;" class="text-black mt-2">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- JavaScript, jQuery, Popper.js, Bootstrap -->
