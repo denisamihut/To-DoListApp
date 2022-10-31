@@ -14,13 +14,13 @@ $(document).ready(function () {
 
         $('#todo_list').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + " " + task_type + ' </span> <button type="button" class="btn btn-primary" id="edit' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="delete' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         if (task_type == type1) {
-            $('#todo_work').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="editw' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deletew' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
+            $('#todo_work').append('<li class="pb-1"><span>' + task_name + ' </span> <button type="button" class="btn btn-primary" id="editw' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deletew' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         }
         if (task_type == type2) {
-            $('#todo_home').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="edith' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deleteh' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
+            $('#todo_home').append('<li class="pb-1"><span>' + task_name + ' </span> <button type="button" class="btn btn-primary" id="edith' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deleteh' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         }
         if (task_type == type3) {
-            $('#todo_school').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + ' </span> <button type="button" class="btn btn-primary" id="edits' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deletes' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
+            $('#todo_school').append('<li class="pb-1"><span>' + task_name + ' </span> <button type="button" class="btn btn-primary" id="edits' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="deletes' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         }
         //CRUD for regular list 
         $('#edit' + counter).click(function () {
