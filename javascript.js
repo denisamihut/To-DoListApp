@@ -9,8 +9,8 @@ $(document).ready(function () {
         var task_due_date = $('#enter_due_date').val();
         var task_type = $('#enter_task_type').val();
         var type1 = "Work Task";
-        var type2 = "School Task";
-        var type3 = "Household Task";
+        var type2 = "Household Task";
+        var type3 = "School Task";
 
         $('#todo_list').append('<li class="pb-1 h5"><span>' + task_name + " " + task_duration + " " + task_due_date + " " + task_type + ' </span> <button type="button" class="btn btn-primary" id="edit' + counter + '"> <i class="fas fa-pencil"></i></button>' + " " + '<button type="button" class="done btn btn-danger" id="delete' + counter + '"> <i class="fas fa-trash"></i></button>' + '</li>');
         if (task_type == type1) {
