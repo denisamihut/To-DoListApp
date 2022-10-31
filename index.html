@@ -18,7 +18,9 @@
 
 <body class="bg-info">
     <div class="container bg-light w-50 pb-4 pt-2 mb-2 mt-5">
-        <h2 class="text-success text-center py-2 my-3 border-bottom border-success">My To-Do List</h2>
+        <h2 class="text-success text-center ">My To-Do List</h2><br>
+        <p class="text-success text-center border-bottom border-success"><span id='date-time'></span>.</p>
+
         <p>Please enter a new task below</p>
 
         <form>
@@ -36,22 +38,29 @@
                 <option value="3hr">3 hours</option>
                 <option value="5hr">5 hours</option>
             </select>
+
             <label for="start">Due date:</label>
             <input type="date" id="enter_due_date" name="task_due_date" min="2022-10-31" max="2022-11-13"><br>
-            <label for="html">Task Category:</label>
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">HTML</label>
-            <input type="radio" id="css" name="fav_language" value="CSS">
-            <label for="css">CSS</label>
-            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-            <label for="javascript">JavaScript</label>
+
+            <label for="household_task">Task Category:</label>
+            <input type="radio" id="household_task" name="household_task">
+            <label for="household_task">Household Task</label>
+
+            <input type="radio" id="work_task" name="work_task">
+            <label for="work_task">Work Task</label>
+
+            <input type="radio" id="school_task" name="school_task">
+            <label for="school_task">School Task</label>
+
             <button type="button" id="add" class="btn btn-success"> <i class="fas fa-list-check"></i> Add
                 Task</button><br>
         </form>
+        <br class="border-bottom border-success"></br>
 
 
         <!-- <input type="text" placeholder="Add New task" id="enter_task"> -->
         <!-- <button type="button" id="add" class="btn btn-success"> <i class="fas fa-list-check"></i> Add Task</button> -->
+        <p>My To-Do List Items</p>
         <ul id="todo_list" class="text-black mt-2">
         </ul>
     </div>

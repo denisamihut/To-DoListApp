@@ -3,6 +3,8 @@ $(document).ready(function () {
     // $('#add').click(function () {
     //     $('#inp').show();
     // });
+    var dt = new Date();
+    document.getElementById('date-time').innerHTML = dt;
     $(function () {
         $('#add').on('click', enter_task);
     });
