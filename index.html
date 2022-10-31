@@ -16,16 +16,21 @@
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" /> -->
 </head>
 
-<body class="bg-info">
-    <div class="container bg-light w-50 pb-4 pt-2 mb-2 mt-5">
-        <h2 class="text-success text-center ">My To-Do List</h2><br>
-        <p class="text-success text-center border-bottom border-success"><span id='date-time'></span>.</p>
+<body class="bg-light">
+    <div class="container bg-dark bg-gradient rounded text-center w-25 p-2 mb-2 mt-5 ">
 
-        <p>Please enter a new task below</p>
+        <div class="heading text-dark mb-1 bg-white p-3 rounded ">
+            <h2 class="border-bottom border-dark py-2">Hello & Welcome to Your To-Do List</h2>
+            <h5>An hour in the morning is worth two in the evening</h5>
+            <p class="text-danger"><span id='date-time'></span>.</p>
+        </div>
 
-        <form>
+        <form class="bg-white p-3 mb-1 rounded">
+            <h3 class="pb-2">What do you want to do today?</h3>
+
             <label for="task_title">Task title: </label>
-            <input type="text" id="enter_task" name="task_title">
+            <input type="text" id="enter_task" name="task_title"><br>
+
             <label for="task_duraion">Task duration: </label>
             <select id="enter_duration" name="task_duraion">
                 <option value="1min">1 minute</option>
@@ -37,32 +42,32 @@
                 <option value="2hr">2 hours</option>
                 <option value="3hr">3 hours</option>
                 <option value="5hr">5 hours</option>
-            </select>
+            </select><br>
 
             <label for="start">Due date:</label>
             <input type="date" id="enter_due_date" name="task_due_date" min="2022-10-31" max="2022-11-13"><br>
 
-            <label for="household_task">Task Category:</label>
+            <label for="household_task">Task Category:</label><br>
             <input type="radio" id="household_task" name="household_task">
-            <label for="household_task">Household Task</label>
+            <label for="household_task">Household Task</label><br>
 
             <input type="radio" id="work_task" name="work_task">
-            <label for="work_task">Work Task</label>
+            <label for="work_task">Work Task</label><br>
 
             <input type="radio" id="school_task" name="school_task">
-            <label for="school_task">School Task</label>
+            <label for="school_task">School Task</label><br>
 
             <button type="button" id="add" class="btn btn-success"> <i class="fas fa-list-check"></i> Add
                 Task</button><br>
         </form>
-        <br class="border-bottom border-success"></br>
-
-
         <!-- <input type="text" placeholder="Add New task" id="enter_task"> -->
         <!-- <button type="button" id="add" class="btn btn-success"> <i class="fas fa-list-check"></i> Add Task</button> -->
-        <p>My To-Do List Items</p>
-        <ul id="todo_list" class="text-black mt-2">
-        </ul>
+        <div class="task_list bg-white p-3 rounded">
+            <h3 class=" pb-2">My To-Do List Items</h3>
+            <ul id="todo_list" style="list-style: none;" class="text-black mt-2">
+            </ul>
+        </div>
+
     </div>
 
     <!-- JavaScript, jQuery, Popper.js, Bootstrap -->
