@@ -10,7 +10,7 @@ $(document).ready(function () {
     var counter = 1;
     function enter_task() {
         var text = $('#enter_task').val();
-        $('#todo_list').append('<li><span>' + text + ' </span> <button type="button" class="btn btn-primary" id="edit' + counter + '"> Edit</button>' + " " + '<button type="button" class="done btn btn-danger" id="delete' + counter + '"> Delete</button>' + '</li>');
+        $('#todo_list').append('<li><span>' + text + ' </span> <button type="button" class="btn btn-primary" id="edit' + counter + '"> <i class="fas fa-pencil"></i> Edit</button>' + " " + '<button type="button" class="done btn btn-danger" id="delete' + counter + '"> <i class="fas fa-trash"></i> Delete</button>' + '</li>');
 
         $('#edit' + counter).click(function () {
             $(this).prev().attr('contenteditable', 'true');
